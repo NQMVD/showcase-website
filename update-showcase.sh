@@ -13,7 +13,7 @@ mkdir -p "$PROJECTS_DIR" "$BASE_DIR/logs"
 echo "[$TIMESTAMP] Starting daily showcase update..." >> "$LOG_FILE"
 
 # Fetch repos (exclude the showcase repo itself)
-gh repo list "$USERNAME" --json name,updatedAt,defaultBranch,description --limit 100 | jq "[.[] | select(.name != \"showcase-website\")]" > repos.json
+gh repo list "$USERNAME" --json name,updatedAt,description --limit 100 | jq "[.[] | select(.name != \"showcase-website\")]" > repos.json
 
 # Process repos
 REPOS=$(jq -r '.[].name' repos.json)

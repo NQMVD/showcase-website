@@ -41,3 +41,4 @@ Vercel CLI ready.
 Script created and made executable.
 Cron job scheduled.
 0 2 * * * /root/AGENTS-DEV/projects/update-showcase.sh >> /root/AGENTS-DEV/projects/logs/cron.log 2>&1
+Manual test run completed.
