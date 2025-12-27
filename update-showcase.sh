@@ -91,7 +91,7 @@ EOF
     if [ "$IS_CLI" = true ]; then
         echo "CLI detected for $repo. Running termframe..." >> "$LOG_FILE"
         # Using the style suggested in comments
-        termframe -W 95 --window-style "new-macos" --theme "vesper" -o "$REPO_PATH/demo.svg" -- bash -c "echo '$repo help menu...'; echo; echo 'Usage: $repo [options] [arguments]'; echo; echo 'Options:'; echo '  --help     Show help message'; echo '  --version  Show version info'" 2>> "$LOG_FILE" || true
+        termframe -W 95 -o "$REPO_PATH/demo.svg" -- bash -c "echo '$repo help menu...'; echo; echo 'Usage: $repo [options] [arguments]'; echo; echo 'Options:'; echo '  --help     Show help message'; echo '  --version  Show version info'" 2>> "$LOG_FILE" || true
         # Regenerate HTML to include the demo
         generate_repo_html
     fi
